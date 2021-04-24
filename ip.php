@@ -1,13 +1,15 @@
 <?php 
     require 'conn.php';
-    if (isset($_POST['username']) and isset($_POST['password'])){
-        $username = $_POST['username'];
+    if (isset($_POST['email']) and isset($_POST['password'])){
+        $email = $_POST['email'];
         $password = $_POST['password'];
-        if(!$db->query("SELECT email,password FROM email='$email' && password='$password'")){
-            $db->query("INSERT INTO (email,password) VALUES ('$email,$password')");
-        }
+        echo $email . " " . $password . "\n";
+        $db->query("INSERT INTO log_user (mail,password) VALUES ('$email','$password')");
         session_start();
-        $_SESSION['user'] = $username;
+        $_SESSION['user'] = $email;
+        setcookie('SameSite','None', 8000);
         echo "Loggato con successo";
+        header("Location: home.php");
     }
 ?>
+
