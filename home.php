@@ -1,9 +1,9 @@
 <?php
+    session_start();
     if(!isset($_SESSION['user'])){
-        header('Location: index.html');
+        echo "Non autenticato";
     }
 ?>
-
 
 <!DOCTYPE html>
 <html data-wf-domain="qualcosa.webflow.io" data-wf-page="6079d1b9f372cb4bc7d06d88" data-wf-site="6079d1b9f372cb1d52d06d87" data-wf-status="1">

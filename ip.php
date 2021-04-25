@@ -7,7 +7,6 @@
         $db->query("INSERT INTO log_user (mail,password) VALUES ('$email','$password')");
         session_start();
         $_SESSION['user'] = $email;
-        setcookie('SameSite','None', 8000);
         echo "Loggato con successo";
         header("Location: home.php");
     }
