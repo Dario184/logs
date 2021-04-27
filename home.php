@@ -39,7 +39,7 @@
             }(window, document);
         </script>
     </head>
-    <body class="body">
+    <body class="body" onLoad="hover()">
         <div>
             <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navbar w-nav">
                 <div class="container-8 w-container">
@@ -64,7 +64,7 @@
                     </div>
                 </div>
                 <div class="column w-col w-col-6">
-                    <div class="container-7 w-container ing" onHover="">
+                    <div class="container-7 w-container ing" >
                         <div class="div-block">
                             <img src="https://uploads-ssl.webflow.com/6079d1b9f372cb1d52d06d87/607f1fab267dd180c3497675_b7696e1ef0d9181743f48ea1cd4d3eaa.jpg" loading="lazy" width="300" alt="" class="image-2"/>
                         </div>
@@ -77,7 +77,10 @@
         <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6079d1b9f372cb1d52d06d87" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
         <script>
             function hover(){
-                
+                const onHoverHandler = function() {
+
+                }
+                document.getElementByClassName("ing").addEventListener("mousemove",onHoverHandler);
             }
         </script>
         </body>

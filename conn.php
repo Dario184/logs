@@ -1,5 +1,5 @@
 <?php 
-    $db = new mysqli("localhost","root","","logs");
+    $db = new mysqli("localhost","root","","log");
     if($db->errno){
         die("Error connecting to database");
         exit();
